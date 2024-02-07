@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+<main class="main-create">
+  <form action="/save" method="POST">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Title"
+        name="title"
+      />
+    </div>
+    <div class="mb-3">
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+        name="desc"
+        placeholder="Write Here..."
+      ></textarea>
+    </div>
+    <input type="submit" value="Create" class="btn-create" />
+  </form>
+</main>
+<%- include("partials/footer.ejs") %>
