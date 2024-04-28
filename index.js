@@ -6,6 +6,9 @@ let posts = [];
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
+app.set('view engine', 'ejs')
+app.engine('ejs', require('ejs').__express);
+app.set('views', __dirname + '/views')
 
 app.get("/", (req, res) => {
     return res.status(200).render("index.ejs", {posts: posts});
