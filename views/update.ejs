@@ -4,78 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Go-Blogger</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <style>
-        body {
-    background-color: #F4F7F7;
-    
-}
-header{
-    text-align: center;
-}
-.sub{
-    text-align: center;
-}
-.blog{
-    text-align: center;
-    border: 1px solid #5DA0A2;
-    padding: 50px;
-    margin: 0 200px 0 200px;
-    background-color: white;
-}
-footer{
-    text-align: center;
-    color: #5DA0A2;
-}
-.title{
-    font-size: 72px;
-    color: #34495E;
-    text-shadow: 2px 3px 3px grey;
-    /* font-style: italic; */
-}
-.sub-title{
-    color: #5DA0A2;
-    font-style: italic;
-    display: inline-block;
-}
-.btn-create{
-    display: inline-block;
-    background-color: #5DA0A2;
-    border: 1px solid #34495E;
-    color: #F4F7F7;
-    padding: 3px 15px 3px 15px;
-    border-radius: 5%;
-}
-.btn-create:hover{
-    background-color: #34495E;
-    border: 1px solid #5DA0A2;
-    color: #AACFD0;
-}
-.btn-edit{
-    background-color: #5DA0A2;
-    border-color: #34495E;
-    color: #F4F7F7;
-}
-.btn-edit:hover{
-    background-color: #369699;
-    border-color: 1px solid #AACFD0;
-    color: white;
-}
-.form-btn{
-    display: flex;
-    gap: 1rem;
-}
-.btn-size{
-    font-size: 25px;
-}
-.main-create{
-    text-align: center;
-    margin: 50px 450px 50px 450px;
-    border: 1px solid #5DA0A2;
-    padding: 50px;
-    background-color: white;
-}
-/* .body{
+      body {
+        background-color: #f4f7f7;
+      }
+      header {
+        text-align: center;
+      }
+      .sub {
+        text-align: center;
+      }
+      .blog {
+        text-align: center;
+        border: 1px solid #5da0a2;
+        padding: 50px;
+        margin: 0 200px 0 200px;
+        background-color: white;
+      }
+      footer {
+        text-align: center;
+        color: #5da0a2;
+      }
+      .title {
+        font-size: 72px;
+        color: #34495e;
+        text-shadow: 2px 3px 3px grey;
+        /* font-style: italic; */
+      }
+      .sub-title {
+        color: #5da0a2;
+        font-style: italic;
+        display: inline-block;
+      }
+      .btn-create {
+        display: inline-block;
+        background-color: #5da0a2;
+        border: 1px solid #34495e;
+        color: #f4f7f7;
+        padding: 3px 15px 3px 15px;
+        border-radius: 5%;
+      }
+      .btn-create:hover {
+        background-color: #34495e;
+        border: 1px solid #5da0a2;
+        color: #aacfd0;
+      }
+      .btn-edit {
+        background-color: #5da0a2;
+        border-color: #34495e;
+        color: #f4f7f7;
+      }
+      .btn-edit:hover {
+        background-color: #369699;
+        border-color: 1px solid #aacfd0;
+        color: white;
+      }
+      .form-btn {
+        display: flex;
+        gap: 1rem;
+      }
+      .btn-size {
+        font-size: 25px;
+      }
+      .main-create {
+        text-align: center;
+        margin: 50px 450px 50px 450px;
+        border: 1px solid #5da0a2;
+        padding: 50px;
+        background-color: white;
+      }
+      /* .body{
     margin: 50px;
     padding: 5px;
     border: 1px solid #34495E;
@@ -84,31 +88,34 @@ footer{
   </head>
   <body>
     <header>
-        <h1 class="title">Go-<span style="color: #5DA0A2;">Blogger</span></h1>
-        
+      <h1 class="title">My-<span style="color: #5da0a2">Blogger</span></h1>
     </header>
-<main class="main-create">
-    <form action="/edit/<%= post.id %>" method="POST">
-      <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Title"
-          name="title"
-          value="<%= post.title %>"
-        />
-      </div>
-      <div class="mb-3">
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-          name="desc"
-          placeholder="Write Here..."
-        ><%= post.desc %></textarea>
-      </div>
-      <input type="submit" value="Save" class="btn-create" />
-    </form>
-  </main>
-<%- include("partials/footer.ejs") %>
+    <main class="main-create">
+      <form action="/edit/<%= post.id %>" method="POST">
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Title"
+            name="title"
+            value="<%= post.title %>"
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            name="desc"
+            placeholder="Write Here..."
+          >
+<%= post.desc %></textarea
+          >
+        </div>
+        <input type="submit" value="Save" class="btn-create" />
+      </form>
+    </main>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>
